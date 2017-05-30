@@ -1,0 +1,147 @@
+08:56:30.858 INFO: Scanner configuration file: C:\dev\sonar-scanner-3.0.3.778\bin\..\conf\sonar-scanner.properties
+08:56:30.858 INFO: Project root configuration file: C:\dev\sonarqube-demo\sonar-project.properties
+08:56:30.889 INFO: SonarQube Scanner 3.0.3.778
+08:56:30.889 INFO: Java 1.8.0_131 Oracle Corporation (64-bit)
+08:56:30.889 INFO: Windows 10 10.0 amd64
+08:56:31.061 DEBUG: keyStore is : 
+08:56:31.061 DEBUG: keyStore type is : jks
+08:56:31.061 DEBUG: keyStore provider is : 
+08:56:31.061 DEBUG: init keystore
+08:56:31.061 DEBUG: init keymanager of type SunX509
+08:56:31.467 INFO: User cache: C:\Users\felipe.zorzo\.sonar\cache
+08:56:31.467 DEBUG: Extract sonar-scanner-api-batch in temp...
+08:56:31.483 DEBUG: Get bootstrap index...
+08:56:31.483 DEBUG: Download: http://localhost:9000/batch/index
+08:56:31.561 DEBUG: Get bootstrap completed
+08:56:31.561 DEBUG: Create isolated classloader...
+08:56:31.561 DEBUG: Start temp cleaning...
+08:56:31.590 DEBUG: Temp cleaning done
+08:56:31.591 DEBUG: Execution getVersion
+08:56:31.595 DEBUG: Execution start
+08:56:31.956 DEBUG: Publish global mode
+08:56:32.096 INFO: Load global settings
+08:56:32.159 DEBUG: GET 200 http://localhost:9000/api/settings/values.protobuf | time=47ms
+08:56:32.190 INFO: Load global settings (done) | time=94ms
+08:56:32.190 INFO: User cache: C:\Users\felipe.zorzo\.sonar\cache
+08:56:32.549 INFO: Load plugins index
+08:56:32.549 DEBUG: GET 200 http://localhost:9000/deploy/plugins/index.txt | time=0ms
+08:56:32.565 INFO: Load plugins index (done) | time=16ms
+08:56:32.565 DEBUG: Load plugins
+08:56:32.565 DEBUG: Load plugins (done) | time=0ms
+08:56:32.581 DEBUG: Plugins:
+08:56:32.581 DEBUG:   * Python 1.7.0.1195 (python)
+08:56:32.581 DEBUG: Execution getVersion
+08:56:32.581 INFO: SonarQube server 6.4.0
+08:56:32.581 INFO: Default locale: "pt_BR", source code encoding: "windows-1252"
+08:56:32.581 DEBUG: Work directory: C:\dev\sonarqube-demo\.scannerwork
+08:56:32.581 DEBUG: Execution getVersion
+08:56:32.581 DEBUG: Execution execute
+08:56:32.768 INFO: Process project properties
+08:56:32.768 DEBUG: Process project properties (done) | time=0ms
+08:56:32.831 INFO: Load project repositories
+08:56:32.846 DEBUG: GET 200 http://localhost:9000/batch/project.protobuf?key=test | time=15ms
+08:56:32.987 INFO: Load project repositories (done) | time=156ms
+08:56:33.081 DEBUG: Available languages:
+08:56:33.081 DEBUG:   * Python => "py"
+08:56:33.081 INFO: Load quality profiles
+08:56:33.112 DEBUG: GET 200 http://localhost:9000/api/qualityprofiles/search.protobuf?projectKey=test | time=31ms
+08:56:33.112 INFO: Load quality profiles (done) | time=31ms
+08:56:33.127 INFO: Load active rules
+08:56:33.190 DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt&activation=true&qprofile=AVxVqe4D7wgnP0NcRbWG&p=1&ps=500 | time=63ms
+08:56:33.252 INFO: Load active rules (done) | time=125ms
+08:56:33.252 INFO: Load metrics repository
+08:56:33.284 DEBUG: GET 200 http://localhost:9000/api/metrics/search?f=name,description,direction,qualitative,custom&ps=500&p=1 | time=32ms
+08:56:33.346 INFO: Load metrics repository (done) | time=94ms
+08:56:33.362 DEBUG: SCM Step is disabled by configuration
+08:56:33.362 INFO: Publish mode
+08:56:33.362 INFO: Project key: test
+08:56:33.362 DEBUG: Start recursive analysis of project modules
+08:56:33.362 INFO: -------------  Scan Test
+08:56:33.440 INFO: Load server rules
+08:56:33.471 DEBUG: GET 200 http://localhost:9000/api/rules/list.protobuf | time=31ms
+08:56:33.487 INFO: Load server rules (done) | time=47ms
+08:56:33.534 DEBUG: Declared extensions of language Python were converted to sonar.lang.patterns.py : **/*.py
+08:56:33.549 DEBUG: Initializers : GenericCoverageSensor
+08:56:33.549 INFO: Initializer GenericCoverageSensor
+08:56:33.549 INFO: Initializer GenericCoverageSensor (done) | time=0ms
+08:56:33.549 INFO: Base dir: C:\dev\sonarqube-demo
+08:56:33.549 INFO: Working dir: C:\dev\sonarqube-demo\.scannerwork
+08:56:33.565 INFO: Source paths: src
+08:56:33.565 INFO: Source encoding: windows-1252, default locale: pt_BR
+08:56:33.565 INFO: Index files
+08:56:33.565 DEBUG: 'src/test-utf8.py' indexed with language 'py'
+08:56:33.565 DEBUG: 'src/test-iso-8859-1.py' indexed with language 'py'
+08:56:33.581 INFO: 2 files indexed
+08:56:33.581 INFO: Quality profile for py: Sonar way
+08:56:33.721 DEBUG: 'Generic Coverage Report' skipped because one of the required properties is missing
+08:56:33.721 DEBUG: 'Generic Test Executions Report' skipped because one of the required properties is missing
+08:56:33.737 DEBUG: 'Generic Coverage Report' skipped because one of the required properties is missing
+08:56:33.737 DEBUG: 'Generic Test Executions Report' skipped because one of the required properties is missing
+08:56:33.737 DEBUG: Sensors : PythonXUnitSensor -> Python Squid Sensor -> Zero Coverage Sensor -> CPD Block Indexer
+08:56:33.737 INFO: Sensor PythonXUnitSensor [python]
+08:56:33.737 DEBUG: Using pattern 'xunit-reports/xunit-result-*.xml' to find reports
+08:56:33.752 DEBUG: No report was found for sonar.python.xunit.reportPath using default pattern xunit-reports/xunit-result-*.xml
+08:56:33.752 INFO: Sensor PythonXUnitSensor [python] (done) | time=15ms
+08:56:33.752 INFO: Sensor Python Squid Sensor [python]
+08:56:33.815 DEBUG: 'src/test-iso-8859-1.py' generated metadata  with charset 'windows-1252'
+08:56:33.831 DEBUG: 'src/test-utf8.py' generated metadata  with charset 'UTF-8'
+08:56:33.831 INFO: ------------------------------------------------------------------------
+08:56:33.831 INFO: EXECUTION FAILURE
+08:56:33.831 INFO: ------------------------------------------------------------------------
+08:56:33.831 INFO: Total time: 3.004s
+08:56:33.940 INFO: Final Memory: 43M/171M
+08:56:33.940 INFO: ------------------------------------------------------------------------
+08:56:33.940 ERROR: Error during SonarQube Scanner execution
+org.sonar.squidbridge.api.AnalysisException: Unable to analyze file: C:\dev\sonarqube-demo\src\test-utf8.py
+	at org.sonar.squidbridge.AstScanner.scanFiles(AstScanner.java:131)
+	at org.sonar.plugins.python.PythonSquidSensor.execute(PythonSquidSensor.java:108)
+	at org.sonar.scanner.sensor.SensorWrapper.analyse(SensorWrapper.java:53)
+	at org.sonar.scanner.phases.SensorsExecutor.executeSensor(SensorsExecutor.java:87)
+	at org.sonar.scanner.phases.SensorsExecutor.execute(SensorsExecutor.java:81)
+	at org.sonar.scanner.phases.SensorsExecutor.execute(SensorsExecutor.java:67)
+	at org.sonar.scanner.phases.AbstractPhaseExecutor.execute(AbstractPhaseExecutor.java:75)
+	at org.sonar.scanner.scan.ModuleScanContainer.doAfterStart(ModuleScanContainer.java:178)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:144)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:129)
+	at org.sonar.scanner.scan.ProjectScanContainer.scan(ProjectScanContainer.java:259)
+	at org.sonar.scanner.scan.ProjectScanContainer.scanRecursively(ProjectScanContainer.java:254)
+	at org.sonar.scanner.scan.ProjectScanContainer.doAfterStart(ProjectScanContainer.java:243)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:144)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:129)
+	at org.sonar.scanner.task.ScanTask.execute(ScanTask.java:47)
+	at org.sonar.scanner.task.TaskContainer.doAfterStart(TaskContainer.java:86)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:144)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:129)
+	at org.sonar.scanner.bootstrap.GlobalContainer.executeTask(GlobalContainer.java:118)
+	at org.sonar.batch.bootstrapper.Batch.executeTask(Batch.java:117)
+	at org.sonarsource.scanner.api.internal.batch.BatchIsolatedLauncher.execute(BatchIsolatedLauncher.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherProxy.invoke(IsolatedLauncherProxy.java:60)
+	at com.sun.proxy.$Proxy0.execute(Unknown Source)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doExecute(EmbeddedScanner.java:233)
+	at org.sonarsource.scanner.api.EmbeddedScanner.runAnalysis(EmbeddedScanner.java:151)
+	at org.sonarsource.scanner.cli.Main.runAnalysis(Main.java:123)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:77)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:61)
+Caused by: java.lang.IllegalArgumentException: Unable to highlight file [moduleKey=test, relative=src/test-utf8.py, basedir=C:\dev\sonarqube-demo]
+	at org.sonar.api.batch.sensor.highlighting.internal.DefaultHighlighting.highlight(DefaultHighlighting.java:97)
+	at org.sonar.api.batch.sensor.highlighting.internal.DefaultHighlighting.highlight(DefaultHighlighting.java:37)
+	at org.sonar.plugins.python.PythonHighlighter.highlight(PythonHighlighter.java:158)
+	at org.sonar.plugins.python.PythonHighlighter.visitToken(PythonHighlighter.java:147)
+	at com.sonar.sslr.impl.ast.AstWalker.visitToken(AstWalker.java:107)
+	at com.sonar.sslr.impl.ast.AstWalker.visit(AstWalker.java:86)
+	at com.sonar.sslr.impl.ast.AstWalker.walkAndVisit(AstWalker.java:69)
+	at org.sonar.squidbridge.AstScanner.scanFiles(AstScanner.java:110)
+	... 32 more
+Caused by: java.lang.IllegalArgumentException: 11 is not a valid line offset for pointer. File [moduleKey=test, relative=src/test-utf8.py, basedir=C:\dev\sonarqube-demo] has 9 character(s) at line 1
+	at org.sonar.api.internal.google.common.base.Preconditions.checkArgument(Preconditions.java:145)
+	at org.sonar.api.batch.fs.internal.DefaultInputFile.checkValid(DefaultInputFile.java:292)
+	at org.sonar.api.batch.fs.internal.DefaultInputFile.newPointer(DefaultInputFile.java:226)
+	at org.sonar.api.batch.fs.internal.DefaultInputFile.newRange(DefaultInputFile.java:242)
+	at org.sonar.api.batch.sensor.highlighting.internal.DefaultHighlighting.highlight(DefaultHighlighting.java:95)
+	... 39 more
+08:56:33.940 DEBUG: Execution getVersion
+08:56:33.940 DEBUG: Execution stop

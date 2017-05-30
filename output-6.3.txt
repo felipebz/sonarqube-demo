@@ -1,0 +1,128 @@
+08:54:43.055 INFO: Scanner configuration file: C:\dev\sonar-scanner-3.0.3.778\bin\..\conf\sonar-scanner.properties
+08:54:43.071 INFO: Project root configuration file: C:\dev\sonarqube-demo\sonar-project.properties
+08:54:43.180 INFO: SonarQube Scanner 3.0.3.778
+08:54:43.180 INFO: Java 1.8.0_131 Oracle Corporation (64-bit)
+08:54:43.180 INFO: Windows 10 10.0 amd64
+08:54:43.743 DEBUG: keyStore is : 
+08:54:43.743 DEBUG: keyStore type is : jks
+08:54:43.743 DEBUG: keyStore provider is : 
+08:54:43.743 DEBUG: init keystore
+08:54:43.758 DEBUG: init keymanager of type SunX509
+08:54:44.524 INFO: User cache: C:\Users\felipe.zorzo\.sonar\cache
+08:54:44.524 DEBUG: Extract sonar-scanner-api-batch in temp...
+08:54:44.524 DEBUG: Get bootstrap index...
+08:54:44.524 DEBUG: Download: http://localhost:9000/batch/index
+08:54:45.071 DEBUG: Get bootstrap completed
+08:54:45.071 DEBUG: Create isolated classloader...
+08:54:45.086 DEBUG: Start temp cleaning...
+08:54:45.102 DEBUG: Temp cleaning done
+08:54:45.102 DEBUG: Execution getVersion
+08:54:45.102 DEBUG: Execution start
+08:54:45.477 DEBUG: Publish global mode
+08:54:45.610 INFO: Load global settings
+08:54:45.766 DEBUG: GET 200 http://localhost:9000/api/settings/values.protobuf | time=140ms
+08:54:45.782 INFO: Load global settings (done) | time=172ms
+08:54:45.797 INFO: User cache: C:\Users\felipe.zorzo\.sonar\cache
+08:54:46.157 INFO: Load plugins index
+08:54:46.157 DEBUG: GET 200 http://localhost:9000/deploy/plugins/index.txt | time=0ms
+08:54:46.157 INFO: Load plugins index (done) | time=0ms
+08:54:46.157 DEBUG: Load plugins
+08:54:46.172 DEBUG: Load plugins (done) | time=15ms
+08:54:46.172 DEBUG: Plugins:
+08:54:46.172 DEBUG:   * Python 1.7.0.1195 (python)
+08:54:46.188 DEBUG: Execution getVersion
+08:54:46.188 INFO: SonarQube server 6.3.1
+08:54:46.188 INFO: Default locale: "pt_BR", source code encoding: "windows-1252"
+08:54:46.188 DEBUG: Work directory: C:\dev\sonarqube-demo\.scannerwork
+08:54:46.188 DEBUG: Execution getVersion
+08:54:46.188 DEBUG: Execution execute
+08:54:46.376 INFO: Process project properties
+08:54:46.376 DEBUG: Process project properties (done) | time=0ms
+08:54:46.454 INFO: Load project repositories
+08:54:46.563 DEBUG: GET 200 http://localhost:9000/batch/project.protobuf?key=test | time=109ms
+08:54:46.703 INFO: Load project repositories (done) | time=249ms
+08:54:46.797 DEBUG: Available languages:
+08:54:46.797 DEBUG:   * Python => "py"
+08:54:46.797 INFO: Load quality profiles
+08:54:46.922 DEBUG: GET 200 http://localhost:9000/api/qualityprofiles/search.protobuf?projectKey=test | time=125ms
+08:54:46.922 INFO: Load quality profiles (done) | time=125ms
+08:54:46.922 INFO: Load active rules
+08:54:47.140 DEBUG: GET 200 http://localhost:9000/api/rules/search.protobuf?f=repo,name,severity,lang,internalKey,templateKey,params,actives,createdAt&activation=true&qprofile=py-sonar-way-11103&p=1&ps=500 | time=218ms
+08:54:47.187 INFO: Load active rules (done) | time=265ms
+08:54:47.187 INFO: Load metrics repository
+08:54:47.250 DEBUG: GET 200 http://localhost:9000/api/metrics/search?f=name,description,direction,qualitative,custom&ps=500&p=1 | time=63ms
+08:54:47.312 INFO: Load metrics repository (done) | time=125ms
+08:54:47.343 DEBUG: SCM Step is disabled by configuration
+08:54:47.343 INFO: Publish mode
+08:54:47.343 INFO: Project key: test
+08:54:47.343 DEBUG: Start recursive analysis of project modules
+08:54:47.343 INFO: -------------  Scan Test
+08:54:47.437 INFO: Load server rules
+08:54:47.484 DEBUG: GET 200 http://localhost:9000/api/rules/list.protobuf | time=47ms
+08:54:47.500 INFO: Load server rules (done) | time=63ms
+08:54:47.547 DEBUG: Declared extensions of language Python were converted to sonar.lang.patterns.py : **/*.py
+08:54:47.593 DEBUG: Initializers : GenericCoverageSensor
+08:54:47.593 INFO: Initializer GenericCoverageSensor
+08:54:47.593 INFO: Initializer GenericCoverageSensor (done) | time=0ms
+08:54:47.593 INFO: Base dir: C:\dev\sonarqube-demo
+08:54:47.593 INFO: Working dir: C:\dev\sonarqube-demo\.scannerwork
+08:54:47.593 INFO: Source paths: src
+08:54:47.593 INFO: Source encoding: windows-1252, default locale: pt_BR
+08:54:47.593 INFO: Index files
+08:54:47.609 DEBUG: 'src/test-utf8.py' indexed with language 'py'
+08:54:47.609 DEBUG: 'src/test-iso-8859-1.py' indexed with language 'py'
+08:54:47.609 INFO: 2 files indexed
+08:54:47.609 INFO: Quality profile for py: Sonar way
+08:54:47.640 DEBUG: Code colorizer, supported languages: 
+08:54:47.781 DEBUG: 'Generic Coverage Report' skipped because one of the required properties is missing
+08:54:47.781 DEBUG: 'Generic Test Executions Report' skipped because one of the required properties is missing
+08:54:47.781 DEBUG: Sensors : PythonXUnitSensor -> Python Squid Sensor -> Zero Coverage Sensor -> Code Colorizer Sensor -> CPD Block Indexer
+08:54:47.781 INFO: Sensor PythonXUnitSensor [python]
+08:54:47.781 DEBUG: Using pattern 'xunit-reports/xunit-result-*.xml' to find reports
+08:54:47.812 DEBUG: No report was found for sonar.python.xunit.reportPath using default pattern xunit-reports/xunit-result-*.xml
+08:54:47.812 INFO: Sensor PythonXUnitSensor [python] (done) | time=31ms
+08:54:47.812 INFO: Sensor Python Squid Sensor [python]
+08:54:47.859 DEBUG: 'src/test-iso-8859-1.py' generated metadata  with charset 'windows-1252'
+08:54:47.874 DEBUG: 'src/test-utf8.py' generated metadata  with charset 'windows-1252'
+08:54:47.906 INFO: Python unit test coverage
+08:54:47.906 DEBUG: Using pattern 'coverage-reports/coverage-*.xml' to find reports
+08:54:47.921 DEBUG: No report was found for sonar.python.coverage.reportPath using default pattern coverage-reports/coverage-*.xml
+08:54:47.921 INFO: Python integration test coverage
+08:54:47.921 DEBUG: Using pattern 'coverage-reports/it-coverage-*.xml' to find reports
+08:54:47.937 DEBUG: No report was found for sonar.python.coverage.itReportPath using default pattern coverage-reports/it-coverage-*.xml
+08:54:47.937 INFO: Python overall test coverage
+08:54:47.937 DEBUG: Using pattern 'coverage-reports/overall-coverage-*.xml' to find reports
+08:54:47.953 DEBUG: No report was found for sonar.python.coverage.overallReportPath using default pattern coverage-reports/overall-coverage-*.xml
+08:54:47.953 INFO: Sensor Python Squid Sensor [python] (done) | time=141ms
+08:54:47.953 INFO: Sensor Zero Coverage Sensor
+08:54:47.968 INFO: Sensor Zero Coverage Sensor (done) | time=15ms
+08:54:47.968 INFO: Sensor Code Colorizer Sensor
+08:54:47.968 INFO: Sensor Code Colorizer Sensor (done) | time=0ms
+08:54:47.968 INFO: Sensor CPD Block Indexer
+08:54:47.968 INFO: org.sonar.scanner.cpd.deprecated.DefaultCpdBlockIndexer@6b530eb9 is used for py
+08:54:47.968 DEBUG: Populating index from C:/dev/sonarqube-demo/src/test-iso-8859-1.py
+08:54:47.984 DEBUG: Populating index from C:/dev/sonarqube-demo/src/test-utf8.py
+08:54:47.984 INFO: Sensor CPD Block Indexer (done) | time=16ms
+08:54:47.984 INFO: SCM Publisher is disabled
+08:54:47.984 INFO: Calculating CPD for 0 files
+08:54:47.984 INFO: CPD calculation finished
+08:54:48.109 INFO: Analysis report generated in 125ms, dir size=9 KB
+08:54:48.124 INFO: Analysis reports compressed in 15ms, zip size=5 KB
+08:54:48.124 INFO: Analysis report generated in C:\dev\sonarqube-demo\.scannerwork\batch-report
+08:54:48.124 DEBUG: Upload report
+08:54:48.265 DEBUG: POST 200 http://localhost:9000/api/ce/submit?projectKey=test&projectName=Test | time=125ms
+08:54:48.265 INFO: Analysis report uploaded in 141ms
+08:54:48.265 INFO: ANALYSIS SUCCESSFUL, you can browse http://localhost:9000/dashboard/index/test
+08:54:48.265 INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+08:54:48.265 INFO: More about the report processing at http://localhost:9000/api/ce/task?id=AVxZNVwaW3U6QwHRsIzs
+08:54:48.265 DEBUG: Report metadata written to C:\dev\sonarqube-demo\.scannerwork\report-task.txt
+08:54:48.281 DEBUG: Post-jobs : 
+08:54:48.281 INFO: Task total time: 2.093 s
+08:54:48.281 INFO: ------------------------------------------------------------------------
+08:54:48.281 INFO: EXECUTION SUCCESS
+08:54:48.281 INFO: ------------------------------------------------------------------------
+08:54:48.281 INFO: Total time: 5.398s
+08:54:48.390 INFO: Final Memory: 46M/170M
+08:54:48.390 INFO: ------------------------------------------------------------------------
+08:54:48.406 DEBUG: Execution getVersion
+08:54:48.406 DEBUG: Execution stop
